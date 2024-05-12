@@ -1,24 +1,24 @@
 # Mock
 
-O termo mock é utilizado quando estamos querendo nos referir á algum modelo, exemplo.
+O termo mock é utilizado quando estamos querendo nos referir a algum modelo, exemplo.
 
 Exemplo:
-Uma API qualquer retorna os setuintes 
-´´´js
+Uma API qualquer retorna os seguintes dados:
+```js
 data: {
   id: '1',
   name: 'John Doe',
   state: active
 }
-´´´
+```
 
-Eu quero fazer um teste com a minha função/metodo que recebe os dado dessa API, porém não quero fazer a request a todo momento.
+Eu quero fazer um teste com a minha função/método que recebe os dado dessa API, porém não quero fazer a request a todo momento.
 
-então para isso eu posso utilizar um "Mock" que seria uma copia local do que a API entregaria.
+Então para isso eu posso utilizar um "Mock" que seria uma cópia local do que a API entregaria.
 
 Exemplo fazendo a request:
 
-´´´js
+```js
 async function fetchData() {
   try {
     const response = await fetch('https://api.example.com/data');
@@ -38,11 +38,10 @@ async function fetchData() {
 const dataToAPI = await fetchData();
 
 handleData(dadosDaAPI);
-´´´
+```
 
 Exemplo com Mock
-
-´´´js
+```js
 const dataToAPI = {
   id: '1',
   name: 'John Doe',
@@ -50,4 +49,4 @@ const dataToAPI = {
 };
 
 handleData(dadosDaAPI);
-´´´
+```
